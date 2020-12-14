@@ -1,0 +1,20 @@
+name: build
+on: [push, pull_request]
+jobs:
+  buildJob:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - run: chmod -R 777 ./
+      - run: echo TOKEN=${{secrets.TOKEN}} >> .env
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm test
+        env:
+          CI: false

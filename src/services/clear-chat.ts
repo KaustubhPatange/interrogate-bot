@@ -1,6 +1,6 @@
 import { DMChannel, Message, TextChannel } from "discord.js";
 import { injectable } from "inversify";
-import { PREFIX } from "..";
+import { PREFIX } from "../constants";
 
 @injectable()
 export class ClearChat {

@@ -5,4 +5,5 @@ export const TYPES = {
     MessageResponder: Symbol("MessageResponder"),
     FindQuery: Symbol("FindQuery"),
     ClearChat: Symbol("ClearChat"),
+    HelpCommand: Symbol("HelpCommand"),
 };

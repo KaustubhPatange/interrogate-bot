@@ -1,6 +1,30 @@
-# interrogate-bot
+# Interrogate-Bot
 
-A discord bot which will find answers to your questions.
+[<img src="art/logo.svg" height="150px" alt="Wiki-Bot" align="right" />](https://discord.com/api/oauth2/authorize?client_id=787565956989452309&permissions=522304&scope=bot)
+
+**Interrogate-Bot** is a bot for [Discord](https://discord.com/) which will find answers to your question. Questions can be definitions or a classic `What/How to` one, for both of them the bot will smartly make assumptions about what you want and reply you with the answer.
+
+_Note: The searches or answers may not match the original question in some cases, because it's a bot not an AI_ :)
+
+> The bot is hosted on a free-tier plan on [Netlify](https://app.netlify.com/) (since this is my non-profit hobby project), so if you find it being offline or not responding to your command it may be that the quota is over. If you find this bot helpful & want to help me hosting it, create a [Github issue](https://github.com/KaustubhPatange/interrogate-bot/issues).
+
+- [Add **Interrogate-Bot** to your server.](https://discord.com/api/oauth2/authorize?client_id=787565956989452309&permissions=522304&scope=bot)
+
+## Commands
+
+After [inviting](https://discord.com/api/oauth2/authorize?client_id=787565956989452309&permissions=522304&scope=bot) **Interrogate-Bot** to your server, you can use the following commands.
+
+| Command                       | Description                                                           |
+| ----------------------------- | --------------------------------------------------------------------- |
+| `!ibot find <query>`          | Reply you with the closely matched answer it finds.                   |
+| `!ibot clear <option number>` | Clear the messages send by this bot & messages that invoked this bot. |
+| `!ibot help`                  | Shows the list of available commands.                                 |
+
+## How it works?
+
+The answer finder algorithm is a web-scrapper over answers.yahoo.com, so every question you ask to the bot will be fetched from that website.
+
+**What makes it so special then?** So if you notice there may be a question which the website doesn't have any answer for or might be closely matched! But, it may be lost in the endless results (due to SEO ranking). Using string matching pattern, the bot calculates a precision point (i.e how two questions are closely related based on their wordings). If the point exceeds certain number it fetches full response for that question otherwise replies you with the similar matches of the question with the hyperlinks for follow-up.
 
 ## Credits
 
