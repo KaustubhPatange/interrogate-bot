@@ -19,6 +19,7 @@ export class MessageResponder {
     }
 
     handle(message: Message): Promise<any> {
+        if (message.author.id === message.client.user.id) return Promise.reject();
         if (!message.content.startsWith(PREFIX)) return Promise.reject();
         const query = message.content.substring(PREFIX.length).trim()
 

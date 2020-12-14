@@ -1,5 +1,6 @@
 import { DMChannel, Message, TextChannel } from "discord.js";
 import { injectable } from "inversify";
+import { PREFIX } from "..";
 
 @injectable()
 export class ClearChat {
@@ -14,7 +15,8 @@ export class ClearChat {
     }
 
     public async command(message: Message, limiter: Number): Promise<Message | any> {
-        const allMessages = await message.channel.messages.fetch({ limit: Number(limiter) })
+        const listOfMessages = await message.channel.messages.fetch({ limit: 99 })
+        const allMessages = listOfMessages.filter(c => c.author.id === message.client.user.id || c.content.startsWith(PREFIX))
         if (message.channel instanceof DMChannel) {
             return await message.reply("Not supported for DM channels")
         } else {
