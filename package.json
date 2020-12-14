@@ -4,9 +4,9 @@
   "description": "A discord bot which will find answers to your questions.",
   "main": "src/index.ts",
   "scripts": {
-    "test": "ts-node src/index.ts debug",
     "start": "ts-node src/index.ts",
-    "watch": "nodemon"
+    "watch": "nodemon",
+    "test": "ts-node src/index.ts debug"
   },
   "keywords": [
     "Google",

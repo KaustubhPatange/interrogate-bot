@@ -6,9 +6,10 @@
 
 _Note: The searches or answers may not match the original question in some cases, because it's a bot not an AI_ :)
 
-> The bot is hosted on a free-tier plan on [Netlify](https://app.netlify.com/) (since this is my non-profit hobby project), so if you find it being offline or not responding to your command it may be that the quota is over. If you find this bot helpful & want to help me hosting it, create a [Github issue](https://github.com/KaustubhPatange/interrogate-bot/issues).
+> The bot is hosted on a free-tier plan on [Heroku](https://heroku.com/) (since this is my non-profit hobby project), so if you find it being offline or not responding to your command it may be that the quota is over. If you find this bot helpful & want to help me hosting it, create a [Github issue](https://github.com/KaustubhPatange/interrogate-bot/issues).
 
 - [Add **Interrogate-Bot** to your server.](https://discord.com/api/oauth2/authorize?client_id=787565956989452309&permissions=522304&scope=bot)
+- [Bot offline? Check discord status.](https://discordstatus.com/)
 
 ## Commands
 
