@@ -1,4 +1,4 @@
-# Interrogate-Bot
+# Interrogate-Bot [<img src="https://github.com/KaustubhPatange/interrogate-bot/workflows/build/badge.svg" alt="Build-CI" align="right" />](https://github.com/KaustubhPatange/interrogate-bot/actions)
 
 [<img src="art/logo.svg" height="150px" alt="Wiki-Bot" align="right" />](https://discord.com/api/oauth2/authorize?client_id=787565956989452309&permissions=522304&scope=bot)
 

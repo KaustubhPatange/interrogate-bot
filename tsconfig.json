@@ -6,6 +6,7 @@
     "esModuleInterop": true,
     "lib": ["es6", "dom", "es2020.string"],
     "sourceMap": true,
+    "outDir": "dist",
     "types": [
       // add node as an option
       "node",

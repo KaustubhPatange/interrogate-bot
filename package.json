@@ -2,11 +2,12 @@
   "name": "interrogate-bot",
   "version": "0.1.0",
   "description": "A discord bot which will find answers to your questions.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "start": "ts-node src/index.ts",
     "watch": "nodemon",
-    "test": "ts-node src/index.ts debug"
+    "test": "node dist/index.js debug"
   },
   "keywords": [
     "Google",

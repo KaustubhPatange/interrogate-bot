@@ -1,1 +1,1 @@
-worker: ts-node src/index.ts
+worker: node dist/index.js
