@@ -7,6 +7,7 @@ import { StringUtils } from "../utils/string-utils";
 @injectable()
 export class FindQuery {
     private regexp = /find\s?(.*)/
+    private endsWithReply = "Note: This searches might not be perfect, I'm just a bot not an AI :)"
 
     public isMatched(command: string): string | null {
         const result = command.match(this.regexp)
@@ -30,7 +31,7 @@ export class FindQuery {
                 if (answer.length > 1300) {
                     answer = `${result.answer.substring(0, 1300)}..., [read more](${result})`
                 }
-                return message.reply(`A perfect search has been found,\n\n**Q. ${result.question}**\n${answer}\n\n_- ${result.author}_`)
+                return message.reply(`A perfect search has been found,\n\n**Q. ${result.question}**\n${answer}\n\n_- ${result.author}_\n\n_${this.endsWithReply}_`)
             } else {
                 await msg.delete()
                 const array = findResult as QuestionResult[]
@@ -42,7 +43,7 @@ export class FindQuery {
                     const r = array[i]
                     answer += `**Q. ${r.question}**\n${r.shortAnswer} [read more](${r.uri})\n\n`
                 }
-                answer += "_Note: This searches might not be perfect, I'm just a bot not an AI :)_"
+                answer += `_${this.endsWithReply}_`
                 return message.reply(answer)
             }
         }

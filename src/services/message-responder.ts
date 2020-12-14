@@ -34,13 +34,12 @@ export class MessageResponder {
 
         const clearMatched = this.clearChat.isMatched(query)
         if (clearMatched != null) {
-            return this.clearChat.command(message, clearMatched);
+            return this.clearChat.command(message, clearMatched)
         }
 
-        const findMatched = this.findQuery.isMatched(query);
+        const findMatched = this.findQuery.isMatched(query)
         if (findMatched != null) {
             this.findQuery.command(message, findMatched)
-            console.log("Match:" + findMatched);
         }
         return Promise.reject();
     }

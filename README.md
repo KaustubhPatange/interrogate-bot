@@ -2,7 +2,7 @@
 
 [<img src="art/logo.svg" height="150px" alt="Wiki-Bot" align="right" />](https://discord.com/api/oauth2/authorize?client_id=787565956989452309&permissions=522304&scope=bot)
 
-**Interrogate-Bot** is a bot for [Discord](https://discord.com/) which will find answers to your question. Questions can be definitions or a classic `What/How to` one, for both of them the bot will smartly make assumptions about what you want and reply you with the answer.
+**Interrogate-Bot** is a bot for [Discord](https://discord.com/) that will find answers to your question. Questions can be definitions or a classic `What/How to` one, for both of them the bot will smartly make assumptions about what you want and reply you with the answer.
 
 _Note: The searches or answers may not match the original question in some cases, because it's a bot not an AI_ :)
 
