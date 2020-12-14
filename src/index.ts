@@ -3,7 +3,7 @@ import container from "./inversify.config";
 import { TYPES } from "./types";
 import { Bot } from "./bot";
 
-export const PREFIX = "!gbot";
+export const PREFIX = "!ibot";
 
 let bot = container.get<Bot>(TYPES.Bot);
 bot.listen().then(() => {

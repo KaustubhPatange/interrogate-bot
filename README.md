@@ -1,5 +1,10 @@
 # interrogate-bot
+
 A discord bot which will find answers to your questions.
+
+## Trademark
+
+- All images & icons are taken from [Icons8](https://icons8.com/).
 
 ## License
 

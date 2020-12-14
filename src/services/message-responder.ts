@@ -1,4 +1,4 @@
-import { Emoji, Message, MessageReaction } from "discord.js";
+import Discord, { Emoji, Message, MessageReaction } from "discord.js";
 import { inject, injectable } from "inversify";
 import { TYPES } from "../types";
 import { PREFIX } from "..";
