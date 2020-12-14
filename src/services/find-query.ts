@@ -29,7 +29,7 @@ export class FindQuery {
                 // Discord has limit of sending message length fewer than 2000.
                 let answer = result.answer.replace(/&#39;/g, "'")
                 if (answer.length > 1300) {
-                    answer = `${result.answer.substring(0, 1300)}..., [read more](${result})`
+                    answer = `${result.answer.substring(0, 1300)}..., [read more](${result.url})`
                 }
                 return message.reply(`A perfect search has been found,\n\n**Q. ${result.question}**\n${answer}\n\n_- ${result.author}_\n\n_${this.endsWithReply}_`)
             } else {

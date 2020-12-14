@@ -7,7 +7,8 @@ import { parse } from 'node-html-parser';
 export interface FindResult {
     question: string,
     answer: string,
-    author: string
+    author: string,
+    url: string,
 }
 
 export interface QuestionResult {
@@ -72,7 +73,8 @@ export class FindHelper {
                     return {
                         question: quest,
                         answer: ans,
-                        author: auth
+                        author: auth,
+                        url: URL,
                     }
                 }
             }
