@@ -3,19 +3,7 @@ import request, { Response } from "request";
 import { isString, PromisifiedRequest } from "./extensions";
 import { StringUtils } from "./string-utils";
 import { parse } from 'node-html-parser';
-
-export interface FindResult {
-    question: string,
-    answer: string,
-    author: string,
-    url: string,
-}
-
-export interface QuestionResult {
-    question: string,
-    shortAnswer: string,
-    uri: string
-}
+import { QuestionResult, FindResult } from "../constants";
 
 export class FindHelper {
     private static regexp = new RegExp(/href=\"(https:\/\/answers.yahoo.com\/question\/.*?)\"/)

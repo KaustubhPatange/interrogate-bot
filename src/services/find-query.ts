@@ -1,12 +1,13 @@
 import Discord, { Message } from "discord.js";
 import { injectable } from "inversify";
+import { QuestionResult } from "../constants";
 import { isString } from "../utils/extensions";
-import { FindHelper, QuestionResult } from "../utils/find-helper";
+import { FindHelper } from "../utils/find-helper";
 import { StringUtils } from "../utils/string-utils";
 
 @injectable()
 export class FindQuery {
-    private regexp = /find\s?(.*)/
+    private regexp = /find\s(.*)/
     private endsWithReply = "Note: This searches might not be perfect, I'm just a bot not an AI :)"
 
     public isMatched(command: string): string | null {

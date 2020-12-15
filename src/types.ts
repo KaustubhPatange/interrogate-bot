@@ -4,6 +4,7 @@ export const TYPES = {
     Token: Symbol("Token"),
     MessageResponder: Symbol("MessageResponder"),
     FindQuery: Symbol("FindQuery"),
+    FindShortQuery: Symbol("FindShortQuery"),
     ClearChat: Symbol("ClearChat"),
     HelpCommand: Symbol("HelpCommand"),
 };

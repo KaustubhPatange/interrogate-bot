@@ -2,6 +2,7 @@ require('dotenv').config(); // Recommended way of loading dotenv
 import container from "./inversify.config";
 import { TYPES } from "./types";
 import { Bot } from "./bot";
+import { FindShortHelper } from "./utils/find-short-helper";
 
 const isDebug = (process.argv[2] === 'debug')
 
