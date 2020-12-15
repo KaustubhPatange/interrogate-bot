@@ -16,6 +16,8 @@ export class FindShortQuery {
     }
 
     public async command(message: Message, query: string): Promise<Message | any> {
+        const msg = await message.channel.send("Searching 1/2")
+
         let replyMessage = ""
         const result = await FindShortHelper.find(query)
         if (result === null) {
@@ -30,6 +32,7 @@ export class FindShortQuery {
             })
             replyMessage += `_${this.endsWithReply}_`
         }
+        await msg.delete()
         return message.reply(replyMessage)
 
     }
